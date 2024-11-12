@@ -46,14 +46,14 @@
   }
   100% {
     opacity: 0;
-    transform: translateY(-30px); /* adjust how far the number floats */
+    transform: translateY(-50px); /* adjust how far the number floats */
   }
 }
 
 .float-score {
   position: absolute;
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   color: green;
-  animation: floatUp 1.5s ease forwards;
+  animation: floatUp 1.7s ease forwards;
   pointer-events: none;
 }
