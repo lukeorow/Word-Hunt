@@ -10,13 +10,13 @@ body {
 .container {
   display: flex;
   align-items: flex-start;
-  gap: 20px; /* Space between the two containers */
-  padding-left: 20px; /* Adjust this to control how far left the game-container shifts */
+  gap: 20px;
+  padding-left: 20px; /* determines how far left the game container shifts */
 }
 
 .game-container {
-  flex: 1; /* Allow game-container to take up available space */
-  max-width: 500px; /* Adjust width as needed */
+  flex: 1;
+  max-width: 500px;
   padding: 20px;
   background-color: #efefef;
   border-radius: 8px;
@@ -99,7 +99,7 @@ button {
 
 .special-letter:hover {
   transform: scale(1.1);
-  transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1); /* Custom easing for extra smoothness */
+  transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .letter {
@@ -115,67 +115,59 @@ button {
   display: flex;
 }
 
-/* Arrange surrounding objects in a circular layout around the center */
+/* puts the 6 surrounding letter objs in a circle */
 .letter-container .obj1 {
   transform: translate(0px, -110px);
-} /* Top */
+} /* top */
 .letter-container .obj2 {
   transform: translate(100px, -55px);
-} /* Top-right */
+} /* top right */
 .letter-container .obj3 {
   transform: translate(100px, 55px);
-} /* Bottom-right */
+} /* bottom right */
 .letter-container .obj4 {
   transform: translate(0px, 110px);
-} /* Bottom */
+} /* bottom */
 .letter-container .obj5 {
   transform: translate(-100px, 55px);
-} /* Bottom-left */
+} /* bottom left */
 .letter-container .obj6 {
   transform: translate(-100px, -55px);
-} /* Top-left */
-
-/*
-.letter-container .obj1:hover { transform: translate(0px, -160px); }
-.letter-container .obj2:hover { transform: translate(140px, -80px); }
-.letter-container .obj3:hover { transform: translate(140px, 80px); }
-.letter-container .obj4:hover { transform: translate(0px, 160px); }
-.letter-container .obj5:hover { transform: translate(-140px, 80px); }
-.letter-container .obj6:hover { transform: translate(-140px, -80px); } */
+} /* top left */
 
 .delete-button {
-  width: 100px; /* Width of the button */
-  height: 40px; /* Height of the button (same as width to make it square) */
-  background-color: white; /* Background color */
-  color: rgb(0, 0, 0); /* Text color */
-  border: 1px solid; /* Remove default border */
-  border-radius: 30px; /* Optional: Rounds the edges slightly */
-  font-size: 16px; /* Font size of text inside the button */
-  text-align: center; /* Center-align text */
-  display: inline-flex; /* Use flex to center text horizontally and vertically */
+  width: 100px;
+  height: 40px;
+  background-color: white;
+  color: rgb(0, 0, 0);
+  border: 1px solid;
+  border-radius: 30px;
+  font-size: 16px;
+  text-align: center;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer; /* Changes cursor to pointer on hover */
-  transition: background-color 0.3s; /* Smooth color transition on hover */
+  cursor: pointer;
+  transition: background-color 0.3s;
   margin-top: -30px;
   margin-right: -20px;
   margin-left: 100px;
 }
 
 .enter-button {
-  width: 100px; /* Width of the button */
-  height: 40px; /* Height of the button (same as width to make it square) */
-  background-color: white; /* Background color */
-  color: rgb(0, 0, 0); /* Text color */
-  border: 1px solid; /* Remove default border */
-  border-radius: 30px; /* Optional: Rounds the edges slightly */
-  font-size: 16px; /* Font size of text inside the button */
-  text-align: center; /* Center-align text */
-  display: inline-flex; /* Use flex to center text horizontally and vertically */
+  width: 100px;
+  height: 40px;
+  background-color: white;
+  color: rgb(0, 0, 0);
+  border: 1px solid;
+  border-radius: 30px;
+  font-size: 16px;
+  text-align: center;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer; /* Changes cursor to pointer on hover */
-  transition: background-color 0.3s; /* Smooth color transition on hover */
+  cursor: pointer;
+  transition: background-color 0.3s;
   margin-top: -30px;
 }
 
@@ -206,7 +198,7 @@ button {
 .random-game-button {
   height: 40px;
   width: 200px;
-  display: inline-flex; /* Use flex to center text horizontally and vertically */
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   border: 1px solid;
@@ -223,7 +215,7 @@ button {
 }
 
 #foundWordsList {
-  list-style-type: none; /* gets rid of bullet points */
+  list-style-type: none;
   padding: 0;
   margin-top: 10px;
 }

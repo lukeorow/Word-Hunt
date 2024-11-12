@@ -128,3 +128,8 @@ function addWordToFoundList(word) {
     foundWordsList.appendChild(listItem);
   }
 }
+
+// adds a pop up that gives the instructions when the "how to play" button is clicked
+document.getElementById("htpButton").addEventListener("click", () => {
+  wordInput.value = wordInput.value.slice(0, -1);
+});

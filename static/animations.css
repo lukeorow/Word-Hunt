@@ -46,14 +46,14 @@
   }
   100% {
     opacity: 0;
-    transform: translateY(-30px); /* Adjust for how far you want it to float */
+    transform: translateY(-30px); /* adjust how far the number floats */
   }
 }
 
 .float-score {
   position: absolute;
   font-size: 1.2rem;
-  color: green; /* Use a color that stands out */
-  animation: floatUp 1.5s ease forwards; /* 1s duration, forwards keeps it at end state */
-  pointer-events: none; /* Prevent this element from interfering with clicks */
+  color: green;
+  animation: floatUp 1.5s ease forwards;
+  pointer-events: none;
 }
