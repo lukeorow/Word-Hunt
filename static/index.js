@@ -130,6 +130,20 @@ function addWordToFoundList(word) {
 }
 
 // adds a pop up that gives the instructions when the "how to play" button is clicked
-document.getElementById("htpButton").addEventListener("click", () => {
-  wordInput.value = wordInput.value.slice(0, -1);
+const howToPlayButton = document.getElementById("htpButton");
+const popupOverlay = document.getElementById("popupOverlay");
+const closePopup = document.getElementById("closePopup");
+
+howToPlayButton.addEventListener("click", () => {
+  popupOverlay.style.display = "flex";
+});
+
+closePopup.addEventListener("click", () => {
+  popupOverlay.style.display = "none";
+});
+
+popupOverlay.addEventListener("click", (event) => {
+  if (event.target === popupOverlay) {
+    popupOverlay.style.display = "none";
+  }
 });

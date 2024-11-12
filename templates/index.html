@@ -71,6 +71,28 @@
         <ul id="foundWordsList"></ul>
       </div>
     </div>
+
+    <div id="popupOverlay" class="popup-overlay">
+      <div class="popup-htp">
+        <span id="closePopup" class="close">&times;</span>
+        <h2>How to Play Word Hunt</h2>
+        <u>Rules:</u>
+        <ul>
+          <li>Use the letters to create as many words as you can</li>
+          <li>Center letter (highlighted blue) must be in the word</li>
+          <li>Words must be at least 4 letters long</li>
+          <li>Letters can be used more than once</li>
+        </ul>
+        <u>Scoring:</u>
+        <ul>
+          <li>4 letter words = 1 point</li>
+          <li>
+            Longer words are worth 1 point per letter <br />(7 letter word = 7
+            points)
+          </li>
+        </ul>
+      </div>
+    </div>
     <script src="{{ url_for('static', filename='index.js') }}"></script>
   </body>
 </html>
