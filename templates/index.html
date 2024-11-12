@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word Hunt</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='animations.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="game-container">
+        <h1>Word Hunt</h1>
+        <input
+          type="text"
+          id="wordInput"
+          class="word-input"
+          placeholder="Type or click letters"
+          maxlength="15"
+          required
+          autofocus
+        />
+        <div class="letters">
+          <div class="letter-container">
+            <div class="special-letter" data-letter="{{ special_letter }}">
+              {{ special_letter.upper() }}
+            </div>
+            <div class="letter obj1" data-letter="{{ letters[0] }}">
+              {{ letters[0].upper() }}
+            </div>
+            <div class="letter obj2" data-letter="{{ letters[1] }}">
+              {{ letters[1].upper() }}
+            </div>
+            <div class="letter obj3" data-letter="{{ letters[2] }}">
+              {{ letters[2].upper() }}
+            </div>
+            <div class="letter obj4" data-letter="{{ letters[3] }}">
+              {{ letters[3].upper() }}
+            </div>
+            <div class="letter obj5" data-letter="{{ letters[4] }}">
+              {{ letters[4].upper() }}
+            </div>
+            <div class="letter obj6" data-letter="{{ letters[5] }}">
+              {{ letters[5].upper() }}
+            </div>
+          </div>
+        </div>
+        <div class="delete-button" id="deleteButton">Delete</div>
+        <div class="delete-button" id="enterButton">Enter</div>
+      </div>
+      <div class="scoreboard-container">
+        <div class="misc-container">
+          <div class="htp-button" id="htpButton">How to Play</div>
+          <div class="previous-games-button" id="previousGamesButton">
+            Previous Games
+          </div>
+          <div class="random-game-button" id="randomGameButton">
+            Randomized Game
+          </div>
+        </div>
+        <div class="score-container">
+          <h2>Score:</h2>
+          <div class="score" id="score">0</div>
+        </div>
+        <ul id="foundWordsList"></ul>
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+  </body>
+</html>

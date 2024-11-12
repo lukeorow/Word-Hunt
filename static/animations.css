@@ -1,0 +1,59 @@
+@import url("styles.css");
+
+.shake {
+  animation: shake 0.5s;
+  border-color: red;
+}
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+/* makes the score pop when points are added */
+@keyframes popIn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3); /* Pop to 1.3x size */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pop-in {
+  animation: popIn 0.3s ease-out;
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30px); /* Adjust for how far you want it to float */
+  }
+}
+
+.float-score {
+  position: absolute;
+  font-size: 1.2rem;
+  color: green; /* Use a color that stands out */
+  animation: floatUp 1.5s ease forwards; /* 1s duration, forwards keeps it at end state */
+  pointer-events: none; /* Prevent this element from interfering with clicks */
+}

@@ -1,0 +1,236 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px; /* Space between the two containers */
+  padding-left: 20px; /* Adjust this to control how far left the game-container shifts */
+}
+
+.game-container {
+  flex: 1; /* Allow game-container to take up available space */
+  max-width: 500px; /* Adjust width as needed */
+  padding: 20px;
+  background-color: #efefef;
+  border-radius: 8px;
+}
+.scoreboard-container {
+  width: 500px;
+  height: 700px;
+  margin-top: 50px;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.letters h2,
+.letters h3 {
+  color: #333;
+}
+
+.score {
+  font-size: 24px;
+}
+
+.word-input {
+  border: none;
+  margin-top: 50px;
+  border-bottom: 0px solid gray;
+  background: transparent;
+  outline: none;
+  font-size: 32px;
+  padding: 5px 0;
+  color: black;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.word-input::placeholder {
+  color: gray;
+  opacity: 0.8;
+  text-transform: none;
+}
+
+.floating-input:focus {
+  border-bottom: 1px solid blue;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 22px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#message {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.letter-container {
+  position: relative;
+  height: 400px;
+  width: 500px;
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.special-letter {
+  background-color: lightblue;
+  height: 90px;
+  width: 90px;
+  font-size: 25px;
+  border-radius: 50%;
+  z-index: 1;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.special-letter:hover {
+  transform: scale(1.1);
+  transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1); /* Custom easing for extra smoothness */
+}
+
+.letter {
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  background-color: rgb(182, 182, 182);
+  border-radius: 50%;
+  font-size: 25px;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+/* Arrange surrounding objects in a circular layout around the center */
+.letter-container .obj1 {
+  transform: translate(0px, -110px);
+} /* Top */
+.letter-container .obj2 {
+  transform: translate(100px, -55px);
+} /* Top-right */
+.letter-container .obj3 {
+  transform: translate(100px, 55px);
+} /* Bottom-right */
+.letter-container .obj4 {
+  transform: translate(0px, 110px);
+} /* Bottom */
+.letter-container .obj5 {
+  transform: translate(-100px, 55px);
+} /* Bottom-left */
+.letter-container .obj6 {
+  transform: translate(-100px, -55px);
+} /* Top-left */
+
+/*
+.letter-container .obj1:hover { transform: translate(0px, -160px); }
+.letter-container .obj2:hover { transform: translate(140px, -80px); }
+.letter-container .obj3:hover { transform: translate(140px, 80px); }
+.letter-container .obj4:hover { transform: translate(0px, 160px); }
+.letter-container .obj5:hover { transform: translate(-140px, 80px); }
+.letter-container .obj6:hover { transform: translate(-140px, -80px); } */
+
+.delete-button {
+  width: 100px; /* Width of the button */
+  height: 40px; /* Height of the button (same as width to make it square) */
+  background-color: white; /* Background color */
+  color: rgb(0, 0, 0); /* Text color */
+  border: 1px solid; /* Remove default border */
+  border-radius: 30px; /* Optional: Rounds the edges slightly */
+  font-size: 16px; /* Font size of text inside the button */
+  text-align: center; /* Center-align text */
+  display: inline-flex; /* Use flex to center text horizontally and vertically */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  transition: background-color 0.3s; /* Smooth color transition on hover */
+  margin-top: -30px;
+  margin-right: -20px;
+  margin-left: 100px;
+}
+
+.enter-button {
+  width: 100px; /* Width of the button */
+  height: 40px; /* Height of the button (same as width to make it square) */
+  background-color: white; /* Background color */
+  color: rgb(0, 0, 0); /* Text color */
+  border: 1px solid; /* Remove default border */
+  border-radius: 30px; /* Optional: Rounds the edges slightly */
+  font-size: 16px; /* Font size of text inside the button */
+  text-align: center; /* Center-align text */
+  display: inline-flex; /* Use flex to center text horizontally and vertically */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  transition: background-color 0.3s; /* Smooth color transition on hover */
+  margin-top: -30px;
+}
+
+.score-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.score {
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.delete-button:hover {
+  background-color: rgb(215, 215, 231);
+}
+
+.misc-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.htp-button,
+.previous-games-button,
+.random-game-button {
+  height: 40px;
+  width: 200px;
+  display: inline-flex; /* Use flex to center text horizontally and vertically */
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  border-width: 2px;
+  border-radius: 40px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.htp-button:hover,
+.previous-games-button:hover,
+.random-game-button:hover {
+  background-color: rgb(215, 215, 231);
+}
+
+#foundWordsList {
+  list-style-type: none; /* gets rid of bullet points */
+  padding: 0;
+  margin-top: 10px;
+}
+
+#foundWordsList li {
+  /* handles style of each list item */
+  padding: 5px 0;
+  font-size: 18px;
+  color: #333;
+}
