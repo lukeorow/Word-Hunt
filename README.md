@@ -3,7 +3,7 @@ Word Hunt
 
 Word puzzle game where players try to make as many words as they can out of 7 letters
 
-Live deployed and playable at
+Live deployed and playable at https://word-hunt-cmjx.onrender.com/
 
 Rules:
 - Create words out of the 7 letters
