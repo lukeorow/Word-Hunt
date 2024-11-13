@@ -87,7 +87,7 @@ function addScore(word) {
   if (l === 4) {
     scoreAdded = 1;
   } else {
-    scoreAdded = 1 + l;
+    scoreAdded = l;
   }
   score += scoreAdded;
 
@@ -123,9 +123,10 @@ function addWordToFoundList(word) {
   if (!correctWords.has(word)) {
     // makes sure the word isn't already on the list
     correctWords.add(word);
-    const listItem = document.createElement("li"); // creates list item in the html
-    listItem.textContent = word;
-    foundWordsList.appendChild(listItem);
+    const wordDiv = document.createElement("div");
+    wordDiv.classList.add("word");
+    wordDiv.textContent = word;
+    foundWordsList.appendChild(wordDiv);
   }
 }
 
