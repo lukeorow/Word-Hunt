@@ -7,6 +7,8 @@ body {
   margin: 0;
 }
 
+/* CONTAINERS */
+
 .container {
   display: flex;
   align-items: flex-start;
@@ -21,6 +23,7 @@ body {
   background-color: #efefef;
   border-radius: 8px;
 }
+
 .scoreboard-container {
   width: 500px;
   height: 700px;
@@ -34,9 +37,7 @@ body {
   color: #333;
 }
 
-.score {
-  font-size: 24px;
-}
+/* WORD INPUT TEXT BOX */
 
 .word-input {
   border: none;
@@ -73,6 +74,8 @@ button {
   margin-top: 10px;
   font-weight: bold;
 }
+
+/* LETTER STYLES AND PLACING */
 
 .letter-container {
   position: relative;
@@ -134,6 +137,8 @@ button {
 .letter-container .obj6 {
   transform: translate(-100px, -55px);
 } /* top left */
+
+/* DELETE AND ENTER BUTTONS */
 
 .delete-button {
   width: 100px;
@@ -214,6 +219,8 @@ button {
   background-color: rgb(215, 215, 231);
 }
 
+/* FOUND WORDS LIST DISPLAY */
+
 #foundWordsList {
   list-style-type: none;
   padding: 0;
@@ -254,6 +261,8 @@ button {
   border-radius: 5px;
   font-size: 1rem;
 }
+
+/* HOW TO PLAY BUTTON POPUP */
 
 .popup-overlay {
   position: fixed;

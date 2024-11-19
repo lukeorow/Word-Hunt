@@ -57,3 +57,11 @@
   animation: floatUp 1.7s ease forwards;
   pointer-events: none;
 }
+
+.float-incorrect-message {
+  position: absolute;
+  font-size: 1.5rem;
+  color: rgb(168, 0, 0);
+  animation: floatUp 3s ease forwards;
+  pointer-events: none;
+}
