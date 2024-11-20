@@ -28,7 +28,8 @@ Game Modes:
 - There's a new game everyday that resets at midnight EST. I hand pick the letters for daily games.
 
 Roadmap:
-- [ ] Implement the ability to go back and play previous date's games 
+- [x] Gives feedback for incorrect inputs displaying why it is invalid
+- [ ] Implement the ability to go back and play previous date's games
 - [ ] Publish the randomized game button that generates a new game of 7 random letters
 - [ ] Change the letter generation of the randomized mode to give letters different likelihoods of being chosen. Letters like 's' and 'e' will have increased chances, as well as groups of letters like 'ing', 'er', and 'ed' to make games more fun
 - [ ] Custom game mode where you can create your own game by picking the letters
